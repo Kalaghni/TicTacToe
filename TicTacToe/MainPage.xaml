@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="TicTacToe.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TicTacToe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image x:Name="imgBackground" HorizontalAlignment="Center" Height="1080" VerticalAlignment="Center" Width="1920" Source="/Assets/background.jpg" FocusVisualPrimaryBrush="White" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <Rectangle Margin="959,299,960,277" Stroke="White" Width="1" StrokeThickness="2" RenderTransformOrigin="960,540" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="-90"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Button x:Name="btnClear" Content="Clear" Height="61" Margin="0,275,78,0" VerticalAlignment="Center" Width="342" FocusVisualPrimaryBrush="Black" Foreground="White" FontSize="36" FontWeight="Normal" FontFamily="Forte" Click="btnClear_Click" HorizontalAlignment="Right"/>
+        <TextBlock x:Name="txtFive" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="txtFour" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="0,0,265,0"/>
+        <TextBlock x:Name="txtSix" HorizontalAlignment="Center" Height="130" Margin="265,0,0,0" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="txtOne" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="0,0,265,265"/>
+        <TextBlock x:Name="txtTwo" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="0,0,0,265"/>
+        <TextBlock x:Name="txtThree" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="265,0,0,265"/>
+        <TextBlock x:Name="txtNine" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="265,265,0,0"/>
+        <TextBlock x:Name="txtEight" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="0,265,0,0"/>
+        <TextBlock x:Name="txtSeven" HorizontalAlignment="Center" Height="130" Text="-" TextWrapping="Wrap" VerticalAlignment="Center" Width="130" FontSize="140" TextAlignment="Center" Foreground="White" FontFamily="Forte" RenderTransformOrigin="960,540" Margin="0,265,265,0"/>
+        <Button x:Name="btnOne" Content="" Height="130" Margin="1,0,265,265" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnOne_Click" RenderTransformOrigin="960,540" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center"/>
+        <Button x:Name="btnTwo" Content="" Height="130" Margin="0,0,0,265" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnTwo_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center"/>
+        <Button x:Name="btnThree" Content="" Height="130" Margin="265,0,0,265" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnThree_Click" HorizontalAlignment="Center" RenderTransformOrigin="960,540"/>
+        <Button x:Name="btnFour" Content="" Height="130" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnFour_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center" Margin="0,0,265,0"/>
+        <Button x:Name="btnFive" Content="" Height="130" Margin="0,0,0,0" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnFive_Click" RenderTransformOrigin="960,540" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+        <Button x:Name="btnSix" Content="" Height="130" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnSix_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center" Margin="265,0,0,0"/>
+        <Button x:Name="btnSeven" Content="" Height="130" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnSeven_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center" Margin="-3,265,265,0"/>
+        <Button x:Name="btnEight" Content="" Height="130" Margin="0,265,0,0" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnEight_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center"/>
+        <Button x:Name="btnNine" Content="" Height="130" Margin="265,265,-0.4,0" VerticalAlignment="Center" Width="130" Background="#00000000" Click="btnNine_Click" RenderTransformOrigin="960,540" HorizontalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Right" Height="54" Margin="0,0,148,0" Text="Player X:" TextWrapping="Wrap" VerticalAlignment="Center" Width="289" FontFamily="Forte" FontSize="48" TextAlignment="Right" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="aiscore" HorizontalAlignment="Right" Height="54" Margin="0,125,148,0" Text="Player O:" TextWrapping="Wrap" VerticalAlignment="Center" Width="289" FontFamily="Forte" FontSize="48" TextAlignment="Right" RenderTransformOrigin="960,540"/>
+        <TextBlock HorizontalAlignment="Right" Height="54" Margin="0,0,148,250" Text="Rounds:" TextWrapping="Wrap" VerticalAlignment="Center" Width="289" FontFamily="Forte" FontSize="48" TextAlignment="Right" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="txtRound" HorizontalAlignment="Right" Height="54" Margin="0,0,40,250" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="59" FontFamily="Forte" FontSize="48" TextAlignment="Center" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="txtPlayerScore" HorizontalAlignment="Right" Height="54" Margin="0,0,40,6" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="59" FontFamily="Forte" FontSize="48" TextAlignment="Center" RenderTransformOrigin="960,540"/>
+        <TextBlock x:Name="txtAiScore" HorizontalAlignment="Right" Height="54" Margin="0,125,40,6" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="59" FontFamily="Forte" FontSize="48" TextAlignment="Center" RenderTransformOrigin="960,540"/>
+        <TextBlock HorizontalAlignment="Left" Height="280" Text="Josh's Impossible Tic Tac Toe" TextWrapping="Wrap" VerticalAlignment="Center" Width="414" Margin="40,0,0,0" FontSize="72" FontFamily="Forte" TextAlignment="Center"/>
+        <RadioButton x:Name="radEasy" Content="Easy" Margin="175,400,0,0" FontFamily="Forte" FontSize="22"/>
+        <RadioButton x:Name="radMedium" Content="Medium" Margin="175,496,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Forte" FontSize="20"/>
+        <RadioButton x:Name="radImpossible" Content="Impossible" Margin="177,600,0,0" VerticalAlignment="Center" FontFamily="Forte" FontSize="20" IsChecked="True"/>
+        <CheckBox x:Name="chkMulti" Content="Two Player Mode" Margin="150,0,0,400" FontFamily="Forte" FontSize="20" IsDoubleTapEnabled="False" IsRightTapEnabled="False" IsHoldingEnabled="False"/>
+        <Button x:Name="btnReset" Content="Reset" Height="61" Margin="0,450,78,0" VerticalAlignment="Center" Width="342" FocusVisualPrimaryBrush="Black" Foreground="White" FontSize="36" FontWeight="Normal" FontFamily="Forte" Click="btnReset_Click" HorizontalAlignment="Right"/>
+        <TextBlock x:Name="txtTurn" Text="X Turn" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0" FontFamily="Forte" FontSize="36"/>
+        <TextBlock x:Name="___No_Name_" Text="Ties:" TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,148,125" FontSize="48" FontFamily="Forte"/>
+        <TextBlock x:Name="txtTies" HorizontalAlignment="Right" Height="54" Margin="0,0,40,125" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="59" FontFamily="Forte" FontSize="48" TextAlignment="Center" RenderTransformOrigin="960,540"/>
+
+    </Grid>
+</Page>
